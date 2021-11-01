@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #1B283F;
+    color: white;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 74px;
+    background-color: #21324F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo {
+    margin-left: 55px;
+}
+#headHeader {
+    font-size: 16px;
+    margin-left: 150px;
+}
+.boxForHeader {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.messageIcoStyle {
+    margin-right: 24px;
+}
+#userBox {
+    display: inline-block;
+    min-width: 262px;
+    height: 100%;
+    border-left: 1px solid #2F4469;
+    display: flex;
+    align-items: center;
+}
+#userPhoto {
+    width: 44px;
+    height: 44px;
+    background-image: url(./photo/userPhoto.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 22px;
+}
+#userNameAndStatus {
+    margin-left: 12px;
+}
+#userName {
+    font-size: 15px;
+    color: #BAC6DA;
+}
+#userStatus {
+    font-size: 14px;
+    color: #3E71BB;
+}
+
+.reportSettings {
+    display: inline-block;
+    min-width: 480px;
+    height: 100%;
+    background-color: #293B5A;
+    margin: 105px 5px 0 31px;
+}
+.insideBox {
+    display: block;
+    padding: 0 26px;
+}
+.insideBox label {
+    display: block;
+    font-size: 13px;
+    color: #B8C3E0;
+    margin: 20px 0 5px 0;
+}
+.insideBox select {
+    width: 100%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #394E72;
+    color: #fff;
+    padding: 0 16px;
+    appearance: none;
+    background: url(./photo/selectArrow.png) no-repeat;
+    background-position-y: center;
+    background-position-x: 398px;
+    background-size: 12px 8px;
+}
+.insideBox select option {
+    background-color: #293B5A;
+}
+.insideBox select:focus {
+    outline: none;
+}
+.insideBox input {
+    width: 100%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #394E72;
+    color: #fff;
+    padding: 0 16px;
+}
+.insideBox input:focus {
+    outline: none;
+}
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+.calendar {
+    position: absolute;
+    margin: 13px 0 13px 398px;
+}
+.insideBox hr {
+    border: none;
+    border-top: 1px solid #4D648B;
+    margin: 20px 0;
+}
+.insideBox button {
+    background-color: #0095D3;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+#showReport:hover {
+    background-color: #1fa1da;
+}
+.dataReportBox {
+    display: inline-block;
+    min-width: 680px;
+    height: 100%;
+    background-color: #293B5A;
+    margin-top: 105px;
+}
+.dataReportBox .headBlock {
+    display: flex;
+    justify-content: space-between;
+}
+#headBlockDownload {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+#headBlockDownload p {
+    color: #B8C3E0;
+    margin-left: 8px;
+}
+#headBlockDownload span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+#headBlockDownload span:hover {
+    text-decoration: underline;
+}
+.dataReportRow {
+    display: flex;
+}
+.dataReportRow .dataReportRowName {
+    font-size: 13px;
+    width: 65%;
+    margin: 2px 0 2px 0;
+    background-color: #1B283F;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.dataReportRow .dataReportRowRowData {
+    font-size: 13px;
+    width: 35%;
+    margin: 2px 0 2px 2px;
+    background-color: #1B283F;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+#rowOne {
+    margin-top: 18px;
+}
+#rowOne .dataReportRowName {
+    background-color: #152032;
+}
+#rowOne .dataReportRowRowData {
+    background-color: #152032;
+}
+#rowTotal{
+    margin-bottom: 20px;
+}
+#rowTotal .dataReportRowName {
+    background-color: #0C1931;
+}
+#rowTotal .dataReportRowRowData {
+    background-color: #0C1931;
+}
+.box {
+    display: flex;
+    justify-content: start;
+}
+
+.headBlock {
+    background-color: #21324F;
+    padding: 14px 26px;
+}
+.headBlock h1 {
+    font-size: 16px;
+}
+
+.navBar {
+    display: inline-block;
+    padding-top: 74px;
+    min-width: 325px;
+    height: 1614px;
+    background-color: #293B5A;
+}
+.navElem {
+    display: block;
+    padding: 17.5px 0 17.5px 55px;
+    transition: 0.3s;
+}
+.navSubelementBox {
+    margin-top: 17.5px;
+    display: none;
+    background: url(./photo/line.png) no-repeat;
+    background-size: 1px 80px;
+    background-position-y: center;
+}
+.navElem:hover {
+    border-right: solid #B758AE;
+}
+.navElem:hover .navSubelementBox{
+    display: block;
+}
+.navElem:hover {
+    background-color: #21324F;
+}
+.navElem:hover .navElemName{
+    color: #0095D3;
+}
+.navElem:hover .navElemIco path{
+    fill: #0095D3;
+}
+.navSubelement:hover .navSubelementName{
+    color: #0095D3;
+}
+.navSubelement {
+    display: block;
+    padding: 10px 0;
+}
+.navSubelementName {
+    margin-left: 37px;
+    transition: 0.4s;
+}
+.navElemIco {
+    display: inline;
+    width: 16px;
+    height: 16px;
+}
+.navElemIco path {
+    fill: #B8C3E0;
+}
+#navElemIcoBack {
+    display: inline;
+    width: 16px;
+    height: 16px;
+    fill: #3A4F71;
+}
+#navElemIcoHome {
+    margin-left: 8px;
+}
+.navElemName {
+    display: inline;
+    font-size: 16px;
+    margin-left: 16px;
+    color: #B8C3E0;
+    transition: 0.4s;
+}
+.navSubelement {
+    display: block;
+}
+.navSubelementName {
+    font-size: 14px;
+}
+.navSubelementBox a { 
+    color: #B8C3E0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+ul {
+    list-style: none;
+}
