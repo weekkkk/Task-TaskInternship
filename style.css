@@ -10,44 +10,45 @@ body {
     background-color: #1B283F;
     color: white;
 }
+
+/*css for header*/
 header {
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-    height: 74px;
-    background-color: #21324F;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 74px;
+    background-color: #21324F;
+    position: fixed;
+    z-index: 1000;
 }
-#logo {
+header #logo{
     margin-left: 55px;
-    min-width: 125px;
+    min-width: 100px;
 }
-#headHeader {
+header h1 {
     font-size: 16px;
     margin: 0 20px 0 150px;
     min-width: 170px;
 }
-.boxForHeader {
+.headerSubBox {
     display: flex;
     align-items: center;
     height: 100%;
 }
-.messageIcoStyle {
-    margin-right: 24px;
-}
-#messageIco {
+#headerMessageIco {
     display: flex;
 }
+#headerMessageIco svg {
+    margin-right: 24px;
+}
 #userBox {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     width: 262px;
     min-width: 200px;
     height: 100%;
     border-left: 1px solid #2F4469;
-    display: flex;
-    align-items: center;
 }
 #userPhoto {
     width: 44px;
@@ -72,19 +73,114 @@ header {
     text-decoration: underline;
 }
 
-#boxForDataBlocks {
-    margin-top: 105px;
-    margin-left: 30px;
+/*css mainBox*/
+#mainBox {
+    display: flex;
     height: 100%;
+    padding-top: 74px;
+}
+
+/*css navBar*/
+#navBarOpenButton {
+    display: none;
+    width: 28px;
+    fill: #fff;
+    position: absolute;
+    margin-left: 12px;
+}
+#navBar {
+    min-width: 325px;
+    height: 100vh;
+    background-color: #293B5A;
+    z-index: 999;
+}
+.navBarElem {
+    transition: 0.3s;
+}
+.navBarElem>a {
+    display: block;
+    padding: 17.5px 0;
+}
+.navBarElem>div {
+    display: block;
+    padding: 17.5px 0;
+}
+.navBarElem svg:first-child{
+    width: 16px;
+    height: 16px;
+    margin-left: 55px;
+}
+.navBarElem path {
+    fill: #B8C3E0;
+}
+.navBarElem svg:last-child{
+    margin-left: 10px;
+}
+#navBarElemIcoBack path{
+    fill: #3A4F71;
+}
+.navBarElem span {
+    font-size: 16px;
+    color: #B8C3E0;
+    margin-left: 16px;
+    transition: 0.4s;
+}
+.navBarElem:hover {
+    background-color: #21324F;
+    border-right: solid #B758AE;
+}
+.navBarElem:hover svg path{
+    fill: #0095D3;
+}
+.navBarElem:hover span{
+    color: #0095D3;
+}
+.navBarSelect{
+    display: none;
+    margin-top: 17.5px;
+    margin-left: 55px;
+    padding-left: 35px;
+    background: url(./photo/line.png) no-repeat;
+    background-size: 1px 80px;
+    background-position-y: center;
+}
+.navBarSelectElement {
+    padding: 17.5px 0;
+}
+.navBarSelectElement a {
+    font-size: 14px;
+    color: #B8C3E0;
+    margin-left: 0px;
+    transition: 0.4s;
+}
+.navBarElem:hover .navBarSelect{
+    display: block;
+}
+.navBarSelectElement:hover a{
+    color: #0095D3;
+}
+
+/**/
+#formAndData {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
 }
 .reportSettings {
-    margin: 0 30px 30px 0;
-    display: inline-block;
     min-width: 480px;
+    height: fit-content;
     background-color: #293B5A;
-    height: 100%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.headBlock {
+    background-color: #21324F;
+    padding: 14px 26px;
+}
+.headBlock h1 {
+    font-size: 16px;
 }
 .insideBox {
     display: block;
@@ -146,13 +242,12 @@ header {
     margin-bottom: 20px;
     transition: 0.3s;
 }
-#showReport:hover {
+.insideBox button:hover {
     background-color: #1fa1da;
 }
 .dataReportBox {
-    display: inline-block;
+    height: fit-content;
     min-width: 680px;
-    height: 100%;
     background-color: #293B5A;
 }
 .dataReportBox .headBlock {
@@ -175,23 +270,46 @@ header {
 #headBlockDownload span:hover {
     text-decoration: underline;
 }
-.dataReportRow {
+
+#dataReportInsideBox {
+    margin-top: 2px;
+}
+.dataReportRow, .dataReportRowInside {
     display: flex;
 }
-.dataReportRow .dataReportRowName {
+.dataReportRowInside .dataReportRowName {
     font-size: 13px;
     width: 65%;
-    margin: 2px 0 2px 0;
     background-color: #1B283F;
     height: 35px;
     display: flex;
     align-items: center;
     padding-left: 20px;
 }
-.dataReportRow .dataReportRowRowData {
+.dataReportRowInside .dataReportRowData {
+    margin-left: 2px;
+    margin-bottom: 2px;
     font-size: 13px;
     width: 35%;
-    margin: 2px 0 2px 2px;
+    background-color: #1B283F;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.dataReportRow .dataReportRowName {
+    font-size: 13px;
+    width: 65%;
+    background-color: #1B283F;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.dataReportRow .dataReportRowData {
+    margin-left: 2px;
+    font-size: 13px;
+    width: 35%;
     background-color: #1B283F;
     height: 35px;
     display: flex;
@@ -204,7 +322,7 @@ header {
 #rowOne .dataReportRowName {
     background-color: #152032;
 }
-#rowOne .dataReportRowRowData {
+#rowOne .dataReportRowData {
     background-color: #152032;
 }
 #rowTotal{
@@ -213,120 +331,15 @@ header {
 #rowTotal .dataReportRowName {
     background-color: #0C1931;
 }
-#rowTotal .dataReportRowRowData {
+#rowTotal .dataReportRowData {
     background-color: #0C1931;
 }
-.box {
-    display: flex;
-}
-
-.headBlock {
-    background-color: #21324F;
-    padding: 14px 26px;
-}
-.headBlock h1 {
-    font-size: 16px;
-}
-
-.navButton {
-    display: none;
-    fill: #fff;
-    position: absolute;
-    margin-left: 12px;
-    width: 28px;
-}
-#navButtonOpen {
-    z-index: 991;
-}
-#navButtonClose {
-    z-index: 990;
-}
-#navBar {
-    display: inline-block;
-    z-index: 999;
-    padding-top: 74px;
-    min-width: 325px;
-    height: 100vh;
-    background-color: #293B5A;
-}
 @media only screen and (max-width : 768px) {
-    #navBar {display: none; position: absolute;}
-    .navButton {display: inline-block;}
-    #headHeader {font-size: 14px; min-width: 160px; margin: 0 20px;}
+    header #logo {width: 100%;}
+    header h1 {font-size: 14px; min-width: 160px; margin: 0 20px;}
     #userBox {width: 100%;}
-    #logo {width: 100%;}
 }
-.navElem {
-    display: block;
-    padding: 17.5px 0 17.5px 55px;
-    transition: 0.3s;
-}
-.navSubelementBox {
-    margin-top: 17.5px;
-    display: none;
-    background: url(./photo/line.png) no-repeat;
-    background-size: 1px 80px;
-    background-position-y: center;
-}
-.navElem:hover {
-    border-right: solid #B758AE;
-}
-.navElem:hover .navSubelementBox{
-    display: block;
-}
-.navElem:hover {
-    background-color: #21324F;
-}
-.navElem:hover .navElemName{
-    color: #0095D3;
-}
-.navElem:hover .navElemIco path{
-    fill: #0095D3;
-}
-.navSubelement:hover .navSubelementName{
-    color: #0095D3;
-}
-.navSubelement {
-    display: block;
-    padding: 10px 0;
-}
-.navSubelementName {
-    margin-left: 37px;
-    transition: 0.4s;
-}
-.navElemIco {
-    display: inline;
-    width: 16px;
-    height: 16px;
-}
-.navElemIco path {
-    fill: #B8C3E0;
-}
-#navElemIcoBack {
-    display: inline;
-    width: 16px;
-    height: 16px;
-    fill: #3A4F71;
-}
-#navElemIcoHome {
-    margin-left: 8px;
-}
-.navElemName {
-    display: inline;
-    font-size: 16px;
-    margin-left: 16px;
-    color: #B8C3E0;
-    transition: 0.4s;
-}
-.navSubelement {
-    display: block;
-}
-.navSubelementName {
-    font-size: 14px;
-}
-.navSubelementBox a { 
-    color: #B8C3E0;
-}
+
 a {
     text-decoration: none;
     color: #fff;
