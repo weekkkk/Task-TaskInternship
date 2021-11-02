@@ -20,7 +20,7 @@ function navOpenAndClose() {
     if (document.getElementById('navBar').style.display == 'none')
         document.getElementById('navBar').style.display = 'inline-block'
     else
-        document.getElementById('navBarOpenButton').style.display = 'none'
+        document.getElementById('navBar').style.display = 'none'
 }
 
 
